@@ -1,23 +1,20 @@
 const express = require("express");
 const {
-    createUser,
-    getUserById,
-    updateUser,
-    deleteUser,
-    getAllUsers,
-    searchUsers,
+    signup,
+    login,
+    getAllUser,
+    getUsers,
 } = require("./controllers/userController");
 
 const app = express();
 
 
-app.post("/api/auth/signup", createUser);
-app.post("/api/auth/login/", searchUsers); 
-app.get("/api/user", getUserById);
+app.post("/api/auth/signup", signup);
 
-app.get("/api/users/:id", updateUser);
+app.post("/api/auth/login/", login); 
 
+app.get("/api/user", getAllUser);
 
-
+app.get("/api/users/:id", getUsers);
 
 module.exports= router;
