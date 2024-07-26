@@ -9,24 +9,18 @@ const signup = asyncHandler(async (req, res) => {
         confirmPassword: req.body.confirmPassword,
       });
     
-      res.status(200).json({
-        message: "Registro feito com sucesso!",
-        data: signUp,
-      });
+      res.status(200).json({ message: "Registro feito com sucesso!",data: signUp,});
 });
 
 const login = asyncHandler(async (req, res) => {
-  const signIn = await Product.create({
+  const signIn = await Users.create({
     username: req.body.username,
     email: req.body.email,
     password: req.body.password,
     confirmPassword: req.body.confirmPassword,
   });
 
-  res.status(200).json({
-    message: "Registro feito com sucesso!",
-    data: signIn,
-  });
+  res.status(200).json({ message: "Registro feito com sucesso!", data: signIn,  });
 });
 
 const getAllUser = asyncHandler(async (req, res) => {
@@ -36,9 +30,7 @@ const getAllUser = asyncHandler(async (req, res) => {
 });
 
 const getUsers = asyncHandler(async (req, res) => {
-  res.status(200).json({
-    message: `Obter um usuario ${req.params.id}`,
-  });
+  res.status(200).json({ message: `Usuario ${req.params.id}`,});
 });
 
 module.exports = { signup, login, getAllUser, getUsers, }
