@@ -4,7 +4,7 @@ const {
     login,
     getAllUser,
     getUsers,
-} = require("./controllers/userController");
+} = require("../controllers/user-controllers");
 
 const app = express();
 

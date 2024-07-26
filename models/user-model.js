@@ -11,11 +11,11 @@ const userSchema = mongoose.Schema(
             required: [true, "Por favor introduza o email"],
         },
         password: {
-            type: String,
+            type: Number,
             required: [true, "Por favor introduza o password"],
         },
         confirmPassword: {
-            type: String,
+            type: Number,
             required: [true, "Por favor introduza o password novamente"],
         },
     },
