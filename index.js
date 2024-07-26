@@ -14,6 +14,4 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/api/users", require("./routes/users-routs"));
 
 
-app.get(port, () =>
-    console.log(`Aplicação rodando em http://localhost:${port}`)
-);
+app.listen(port, () => console.log(`Aplicação rodando em http://localhost:${port}`));
