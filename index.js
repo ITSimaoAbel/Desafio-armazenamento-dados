@@ -11,3 +11,10 @@ app.use(express.jason());
 app.use(express.urlencoded({ extended: false }));
 
 // My routes
+
+app.use("/api/users", require("./routes/users-routs"));
+
+
+app.get("/", (req, res) => {
+    console.log(`Aplicação rodando em http://localhost:${port}`);
+});
